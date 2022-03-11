@@ -1,5 +1,34 @@
 #include "deviceDefinitions.h"
 
+bool backTilterState = true;
+bool frontClawState = true;
+
+bool driveEnd = false;
+bool turnRightEnd = false;
+bool turnLeftEnd = false;
+bool liftEnd = false;
+bool conveyorEnd = false;
+
+bool driveRunning = false;
+bool turnRightRunning = false;
+bool turnLeftRunning = false;
+bool liftRunning = false;
+bool conveyorRunning = false;
+
+double driveVelocity = 600.0;
+double turnRightVelocity = 600.0;
+double turnLeftVelocity = 600.0;
+double liftVelocity = 100.0;
+double conveyorVelocity = 450.0;
+
+const double maxDriveVelocity = 600.0;
+const double maxTurnRightVelocity = 600.0;
+const double maxTurnLeftVelocity = 600.0;
+const double maxLiftVelocity = 100.0;
+const double maxConveyorVelocity = 600.0;
+
+double driveDistance, turnRightAngle, turnLeftAngle, liftPosition;
+
 std::shared_ptr<ChassisController> chassis;
 
 Motor leftBack(5, true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);

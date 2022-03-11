@@ -3,6 +3,36 @@
 
 #include "main.h"
 using namespace okapi;
+
+extern bool backTilterState;
+extern bool frontClawState;
+
+extern bool driveEnd;
+extern bool turnRightEnd;
+extern bool turnLeftEnd;
+extern bool liftEnd;
+extern bool conveyorEnd;
+
+extern bool driveRunning;
+extern bool turnRightRunning;
+extern bool turnLeftRunning;
+extern bool liftRunning;
+extern bool conveyorRunning;
+
+extern double driveVelocity;
+extern double turnRightVelocity;
+extern double turnLeftVelocity;
+extern double liftVelocity;
+extern double conveyorVelocity;
+
+extern const double maxDriveVelocity;
+extern const double maxTurnRightVelocity;
+extern const double maxTurnLeftVelocity;
+extern const double maxLiftVelocity;
+extern const double maxConveyorVelocity;
+
+extern double driveDistance, turnRightAngle, turnLeftAngle, liftPosition;
+
 extern std::shared_ptr<ChassisController> chassis;
 
 extern MotorGroup leftChassis;
